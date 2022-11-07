@@ -19,7 +19,7 @@ class WhatsAppController extends Controller
     public function index(Request $request)
     {
 
-        dump($request->all());
+        //dump($request->all());
         $whatsapp_cloud_api = new WhatsAppCloudApi([
             'from_phone_number_id' => '110829038490956',
             'access_token' => 'EAAJVc3j40G8BAFH4mcdKDCLRHyucTrNcRZC0k9zjtQyO9iPmZBCSwMYFyZCWWR4kofFmCvbOsPB36kkREJyJvK9KZAQDxZAoXKmfbeYi2SPEbOjU0Wdo8QT5yLkXtHlF2c2wW2EbZBdAQdRqZANQltjsMg7ia3A9QaXyqS8NaM8XaZASk9aVpcXmZAXAz3P9I3G2ABYqgqKLEeQZDZD',
@@ -39,7 +39,7 @@ class WhatsAppController extends Controller
     
 
         $verify_token = env('VERIFY_TOKEN');
-        dump($request);
+        //dump($request);
         $challenge = $request->hub_challenge;
         $mode = $request->hub_mode;
         $token = $request->hub_verify_token;
