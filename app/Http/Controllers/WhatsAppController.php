@@ -46,8 +46,8 @@ class WhatsAppController extends Controller
 
         if( $mode && $token ){
 
-            if($mode === 'subscribe' && $token === $verify_token ){
-                return response($challenge, 200);
+            if($mode == 'subscribe' && $token == $verify_token ){
+                return $challenge;
                 
             }else{
                 return response(403);
