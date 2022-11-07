@@ -39,13 +39,13 @@ class WhatsAppController extends Controller
 
         $verify_token = env('VERIFY_TOKEN');
         //dump($request);
-        // $challenge = $request->hub_challenge;
-        // $mode = $request->hub_mode;
-        // $token = $request->hub_verify_token;
+        $challenge = $request->hub_challenge;
+        $mode = $request->hub_mode;
+        $token = $request->hub_verify_token;
 
-        $challenge = $_GET['hub_challenge'];
-        $mode = $_GET['hub_mode'];
-        $token = $_GET['hub_verify_token'];
+        // $challenge = $_GET['hub_challenge'];
+        // $mode = $_GET['hub_mode'];
+        // $token = $_GET['hub_verify_token'];
 
         if( $mode && $token ){
 
